@@ -1,0 +1,20 @@
+class Solution {
+    public String reverseWords(String s) {
+        // creating the empty String ... ans ..
+       String ans = "";
+       // now iterate the giveing string and if the charAt(i) is not equal to space just append in  stringbuilder .. 
+       for (int i =0; i<s.length();i++){
+       StringBuilder sb = new StringBuilder();
+       while (i<s.length() && s.charAt(i) != ' ' ){
+           sb.append(s.charAt(i));
+           i++;
+       }
+       // if your stringbuilder containg some word just store in ans like ans = " " + sb + ans ;
+       if (sb.length() != 0){
+           ans = " " + sb + ans;
+       }
+       }
+       // retun the ans form 1 index just removing  the last  space in ans .. using substring .. 
+       return ans.substring(1);
+    }
+}
